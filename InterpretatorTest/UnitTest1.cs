@@ -56,6 +56,31 @@ namespace InterpretatorTest
             result = interpretator.Run(expression);
             resultSumma = Convert.ToInt32(result.ToString());
             Assert.AreEqual(404451, resultSumma);
+
+            expression = "5-4";
+            result = interpretator.Run(expression);
+            resultSumma = Convert.ToInt32(result.ToString());
+            Assert.AreEqual(1, resultSumma);
+
+            expression = "124-15-48-52-13";
+            result = interpretator.Run(expression);
+            resultSumma = Convert.ToInt32(result.ToString());
+            Assert.AreEqual(-4, resultSumma);
+
+            expression = "1237/15/3";
+            result = interpretator.Run(expression);
+            resultSumma = Convert.ToInt32(result.ToString());
+            Assert.AreEqual(27, resultSumma);
+
+            expression = "1237%145%45";
+            result = interpretator.Run(expression);
+            resultSumma = Convert.ToInt32(result.ToString());
+            Assert.AreEqual(32, resultSumma);
+
+            expression = "(123-45*23)+34%3+3/4+5*2+3*(45-32)/2-6*4/5";
+            result = interpretator.Run(expression);
+            resultSumma = Convert.ToInt32(result.ToString());
+            Assert.AreEqual((123 - 45 * 23) + 34 % 3 + 3 / 4 + 5 * 2 + 3 * (45 - 32) / 2 - 6 * 4 / 5, resultSumma);
         }
     }
 }

@@ -10,7 +10,10 @@ namespace Interpretator
 
         private Regex regexInt = new Regex(@"^-?\d+$");
         private Regex regexPlus = new Regex(@"[+]");
+        private Regex regexMinus = new Regex(@"[-]");
         private Regex regexMulty = new Regex(@"[*]");
+        private Regex regexDiv = new Regex(@"[/]");
+        private Regex regexRest = new Regex(@"[%]");
         private Regex regexLeftBracket = new Regex(@"[(]$");
         private Regex regexRightBracket = new Regex(@"[)]$");
 
@@ -71,6 +74,12 @@ namespace Interpretator
                     T(enumerator);
                     elements.Add("+");
                     Es(enumerator);
+                }else if (regexMinus.IsMatch(readedSymbols))
+                {
+                    enumerator.MoveNext();
+                    T(enumerator);
+                    elements.Add("-");
+                    Es(enumerator);
                 }
             }
         }
@@ -110,6 +119,20 @@ namespace Interpretator
                     enumerator.MoveNext();
                     P(enumerator);
                     elements.Add("*");
+                    Ts(enumerator);
+                }
+                else if (regexDiv.IsMatch(readedSymbols))
+                {
+                    enumerator.MoveNext();
+                    P(enumerator);
+                    elements.Add("/");
+                    Ts(enumerator);
+                }
+                else if (regexRest.IsMatch(readedSymbols))
+                {
+                    enumerator.MoveNext();
+                    P(enumerator);
+                    elements.Add("%");
                     Ts(enumerator);
                 }
 
@@ -170,17 +193,26 @@ namespace Interpretator
             switch (element)
             {
                 case "+":
-                    stack.Push((Int32.Parse(operand1) + Int32.Parse(operand2)).ToString());
+                    stack.Push((Int32.Parse(operand2) + Int32.Parse(operand1)).ToString());
+                    break;
+                case "-":
+                    stack.Push((Int32.Parse(operand2) - Int32.Parse(operand1)).ToString());
                     break;
                 case "*":
-                    stack.Push((Int32.Parse(operand1) * Int32.Parse(operand2)).ToString());
+                    stack.Push((Int32.Parse(operand2) * Int32.Parse(operand1)).ToString());
                     break;
+                case "/":
+                    stack.Push((Int32.Parse(operand2) / Int32.Parse(operand1)).ToString());
+                    break;
+                case "%":
+                    stack.Push((Int32.Parse(operand2) % Int32.Parse(operand1)).ToString());
+                    break;    
             }
         }
 
         private static bool IsOperation(string element)
         {
-            return (element == "+") || (element == "*");
+            return (element == "+") || (element == "*") || (element == "-") || (element == "/") || (element == "%");
         }
     }
 }
