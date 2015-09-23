@@ -1,0 +1,10 @@
+c:\users\student\documents\visual studio 2012\Projects\Interpretator\Interpretator\bin\Debug\Interpretator.dll
+c:\users\student\documents\visual studio 2012\Projects\Interpretator\Interpretator\bin\Debug\Interpretator.pdb
+c:\users\student\documents\visual studio 2012\Projects\Interpretator\Interpretator\obj\Debug\Interpretator.csprojResolveAssemblyReference.cache
+c:\users\student\documents\visual studio 2012\Projects\Interpretator\Interpretator\obj\Debug\Interpretator.dll
+c:\users\student\documents\visual studio 2012\Projects\Interpretator\Interpretator\obj\Debug\Interpretator.pdb
+C:\Users\IMayl\Desktop\Interpretator\Interpretator\bin\Debug\Interpretator.dll
+C:\Users\IMayl\Desktop\Interpretator\Interpretator\bin\Debug\Interpretator.pdb
+C:\Users\IMayl\Desktop\Interpretator\Interpretator\obj\Debug\Interpretator.csprojResolveAssemblyReference.cache
+C:\Users\IMayl\Desktop\Interpretator\Interpretator\obj\Debug\Interpretator.dll
+C:\Users\IMayl\Desktop\Interpretator\Interpretator\obj\Debug\Interpretator.pdb
