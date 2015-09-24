@@ -4,7 +4,7 @@ using System.Text.RegularExpressions;
 
 namespace Interpretator
 {
-    public class InterpretatorExpression : IInterpretator
+    public class InterpretatorExpression : IInterpretator<int>
     {
         private List<string> elements = new List<string>();
 
@@ -17,7 +17,7 @@ namespace Interpretator
         private Regex regexLeftBracket = new Regex(@"[(]$");
         private Regex regexRightBracket = new Regex(@"[)]$");
 
-        public object Run(string expression)
+        public int Run(string expression)
         {
             elements.Clear();
 
@@ -39,7 +39,7 @@ namespace Interpretator
                 }
             }
 
-            return stack.Pop();
+            return Convert.ToInt32(stack.Pop());
         }
         
         private void E(CharEnumerator enumerator)

@@ -39,9 +39,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BooleanExpInterpretator.cs" />
+    <Compile Include="Bool\AndExp.cs" />
+    <Compile Include="Bool\BooleanExp.cs" />
+    <Compile Include="Bool\ConstantExp.cs" />
+    <Compile Include="Bool\Context.cs" />
+    <Compile Include="Bool\NotExp.cs" />
+    <Compile Include="Bool\OrExp.cs" />
+    <Compile Include="Bool\VariableExp.cs" />
     <Compile Include="IInterpretator.cs" />
     <Compile Include="InterpretatorExpression.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StringHelper.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -1,7 +1,7 @@
 ﻿namespace Interpretator
 {
-    public interface IInterpretator
+    public interface IInterpretator<T>
     {
-        object Run(string expression);
+        T Run(string expression);
     }
 }

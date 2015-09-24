@@ -1,6 +1,7 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Interpretator;
+using Interpretator.Bool;
 
 namespace InterpretatorTest
 {
@@ -10,7 +11,7 @@ namespace InterpretatorTest
         [TestMethod]
         public void InterpretatorExpressionTest()
         {
-            IInterpretator interpretator = new InterpretatorExpression();
+            var interpretator = new InterpretatorExpression();
             string expression = "4+5";
             var result = interpretator.Run(expression);
             int resultSumma = Convert.ToInt32(result.ToString());
@@ -81,6 +82,34 @@ namespace InterpretatorTest
             result = interpretator.Run(expression);
             resultSumma = Convert.ToInt32(result.ToString());
             Assert.AreEqual((123 - 45 * 23) + 34 % 3 + 3 / 4 + 5 * 2 + 3 * (45 - 32) / 2 - 6 * 4 / 5, resultSumma);
+        }
+
+
+        [TestMethod]
+        public void BoolExpTest()
+        {
+            var context = new Context();
+            var interpretator = new BooleanExpInterpretator(context);
+
+            var expressionString = "true && false";
+            var result = interpretator.Run(expressionString).Evaluate(context);
+		    Assert.AreEqual(false, result);
+
+            expressionString = "true && false || true";
+            result = interpretator.Run(expressionString).Evaluate(context);
+            Assert.AreEqual(true, result);
+
+            expressionString = "true && (false || true)";
+            result = interpretator.Run(expressionString).Evaluate(context);
+            Assert.AreEqual(true, result);
+
+            expressionString = "true && false || true && (!true || false)";
+            result = interpretator.Run(expressionString).Evaluate(context);
+            Assert.AreEqual(false, result);
+
+            expressionString = "true && (!false && (true || !false && true)) || false";
+            result = interpretator.Run(expressionString).Evaluate(context);
+            Assert.AreEqual(true, result);
         }
     }
 }
