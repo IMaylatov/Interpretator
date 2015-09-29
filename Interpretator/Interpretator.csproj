@@ -39,19 +39,42 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BooleanExpInterpretator.cs" />
-    <Compile Include="Bool\AndExp.cs" />
-    <Compile Include="Bool\BooleanExp.cs" />
-    <Compile Include="Bool\ConstantExp.cs" />
-    <Compile Include="Bool\Context.cs" />
-    <Compile Include="Bool\NotExp.cs" />
-    <Compile Include="Bool\OrExp.cs" />
-    <Compile Include="Bool\VariableExp.cs" />
-    <Compile Include="IInterpretator.cs" />
-    <Compile Include="InterpretatorExpression.cs" />
+    <Compile Include="Interpretator\BooleanInterpretator.cs" />
+    <Compile Include="Interpretator\RealInterpretator.cs" />
+    <Compile Include="Interpretator\StringInterpretator.cs" />
+    <Compile Include="Type\Bool\AndBooleanExp.cs" />
+    <Compile Include="Type\Bool\ConstantBooleanExp.cs" />
+    <Compile Include="Type\Bool\RealEqualsBooleanExp.cs" />
+    <Compile Include="Type\Bool\RealLessBooleanExp.cs" />
+    <Compile Include="Type\Bool\RealLessOrEqualsBooleanExp.cs" />
+    <Compile Include="Type\Bool\RealMoreBooleanExp.cs" />
+    <Compile Include="Type\Bool\RealMoreOrEqualsBooleanExp.cs" />
+    <Compile Include="Type\Bool\RealNotEqualsBooleanExp.cs" />
+    <Compile Include="Type\Bool\StringEqualsBooleanExp.cs" />
+    <Compile Include="Type\Bool\StringNotEqualsBooleanExp.cs" />
+    <Compile Include="Type\Context.cs" />
+    <Compile Include="Type\Bool\NotBooleanExp.cs" />
+    <Compile Include="Type\Bool\OrBooleanExp.cs" />
+    <Compile Include="Type\Bool\VariableExp.cs" />
+    <Compile Include="Interpretator\IInterpretator.cs" />
+    <Compile Include="Interpretator\IntInterpretator.cs" />
+    <Compile Include="Type\Exp.cs" />
+    <Compile Include="Type\Int\AddIntExp.cs" />
+    <Compile Include="Type\Int\ConstantIntExp.cs" />
+    <Compile Include="Type\Int\DivIntExp.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="StringHelper.cs" />
+    <Compile Include="Helper\StringHelper.cs" />
+    <Compile Include="Type\Int\MultiIntExp.cs" />
+    <Compile Include="Type\Int\SubIntExp.cs" />
+    <Compile Include="Type\Real\AddRealExp.cs" />
+    <Compile Include="Type\Real\ConstantRealExp.cs" />
+    <Compile Include="Type\Real\DivRealExp.cs" />
+    <Compile Include="Type\Real\MultiRealExp.cs" />
+    <Compile Include="Type\Real\SubRealExp.cs" />
+    <Compile Include="Type\String\ConcatStringExp.cs" />
+    <Compile Include="Type\String\ConstantStringExp.cs" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
