@@ -12,3 +12,10 @@ C:\Users\IMayl\Desktop\Interpretator\InterpretatorTest\bin\Debug\Interpretator.p
 C:\Users\IMayl\Desktop\Interpretator\InterpretatorTest\obj\Debug\InterpretatorTest.csprojResolveAssemblyReference.cache
 C:\Users\IMayl\Desktop\Interpretator\InterpretatorTest\obj\Debug\InterpretatorTest.dll
 C:\Users\IMayl\Desktop\Interpretator\InterpretatorTest\obj\Debug\InterpretatorTest.pdb
+F:\Interpretator\InterpretatorTest\bin\Debug\InterpretatorTest.dll
+F:\Interpretator\InterpretatorTest\bin\Debug\InterpretatorTest.pdb
+F:\Interpretator\InterpretatorTest\bin\Debug\Interpretator.dll
+F:\Interpretator\InterpretatorTest\bin\Debug\Interpretator.pdb
+F:\Interpretator\InterpretatorTest\obj\Debug\InterpretatorTest.csprojResolveAssemblyReference.cache
+F:\Interpretator\InterpretatorTest\obj\Debug\InterpretatorTest.dll
+F:\Interpretator\InterpretatorTest\obj\Debug\InterpretatorTest.pdb

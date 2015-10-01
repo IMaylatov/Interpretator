@@ -7,4 +7,7 @@ C:\Users\IMayl\Desktop\Interpretator\Interpretator\bin\Debug\Interpretator.dll
 C:\Users\IMayl\Desktop\Interpretator\Interpretator\bin\Debug\Interpretator.pdb
 C:\Users\IMayl\Desktop\Interpretator\Interpretator\obj\Debug\Interpretator.dll
 C:\Users\IMayl\Desktop\Interpretator\Interpretator\obj\Debug\Interpretator.pdb
-C:\Users\IMayl\Desktop\Interpretator\Interpretator\obj\Debug\Interpretator.csprojResolveAssemblyReference.cache
+F:\Interpretator\Interpretator\obj\Debug\Interpretator.dll
+F:\Interpretator\Interpretator\obj\Debug\Interpretator.pdb
+F:\Interpretator\Interpretator\bin\Debug\Interpretator.dll
+F:\Interpretator\Interpretator\bin\Debug\Interpretator.pdb

@@ -39,9 +39,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Interpretator\BooleanInterpretator.cs" />
-    <Compile Include="Interpretator\RealInterpretator.cs" />
-    <Compile Include="Interpretator\StringInterpretator.cs" />
+    <Compile Include="Interpretator\RegionInterpretator.cs" />
+    <Compile Include="Interpretator\Type\Array\BoolArrayInterpretator.cs" />
+    <Compile Include="Interpretator\Type\Array\IntArrayInterpretator.cs" />
+    <Compile Include="Interpretator\Type\Array\RealArrayInterpretator.cs" />
+    <Compile Include="Interpretator\Type\Array\StringArrayInterpretator.cs" />
+    <Compile Include="Interpretator\Type\BoolInterpretator.cs" />
+    <Compile Include="Interpretator\Type\RealInterpretator.cs" />
+    <Compile Include="Interpretator\Type\StringInterpretator.cs" />
+    <Compile Include="Interpretator\VariableInterpretator.cs" />
     <Compile Include="Type\Bool\AndBooleanExp.cs" />
     <Compile Include="Type\Bool\ConstantBooleanExp.cs" />
     <Compile Include="Type\Bool\RealEqualsBooleanExp.cs" />
@@ -55,9 +61,8 @@
     <Compile Include="Type\Context.cs" />
     <Compile Include="Type\Bool\NotBooleanExp.cs" />
     <Compile Include="Type\Bool\OrBooleanExp.cs" />
-    <Compile Include="Type\Bool\VariableExp.cs" />
-    <Compile Include="Interpretator\IInterpretator.cs" />
-    <Compile Include="Interpretator\IntInterpretator.cs" />
+    <Compile Include="Interpretator\Type\IInterpretator.cs" />
+    <Compile Include="Interpretator\Type\IntInterpretator.cs" />
     <Compile Include="Type\Exp.cs" />
     <Compile Include="Type\Int\AddIntExp.cs" />
     <Compile Include="Type\Int\ConstantIntExp.cs" />
@@ -73,6 +78,7 @@
     <Compile Include="Type\Real\SubRealExp.cs" />
     <Compile Include="Type\String\ConcatStringExp.cs" />
     <Compile Include="Type\String\ConstantStringExp.cs" />
+    <Compile Include="Type\Variable\VariableExp.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
